@@ -1,0 +1,139 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: #0b0d12;
+  color: #e9edf3;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  height: 100%;
+}
+
+#__next {
+  height: 100%;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 24px 16px;
+}
+
+.chat-shell {
+  width: 100%;
+  max-width: 720px;
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 48px);
+}
+
+.chat-header {
+  padding-bottom: 12px;
+  border-bottom: 1px solid #1f2430;
+  margin-bottom: 12px;
+}
+
+.chat-header h1 {
+  font-size: 18px;
+  margin: 0 0 4px 0;
+}
+
+.chat-header p {
+  margin: 0;
+  font-size: 13px;
+  color: #8a93a6;
+}
+
+.messages {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 8px 4px 16px 4px;
+}
+
+.msg {
+  max-width: 85%;
+  padding: 10px 14px;
+  border-radius: 12px;
+  line-height: 1.45;
+  font-size: 14.5px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.msg.user {
+  align-self: flex-end;
+  background: #2b5df2;
+  color: white;
+  border-bottom-right-radius: 4px;
+}
+
+.msg.assistant {
+  align-self: flex-start;
+  background: #171b24;
+  border: 1px solid #262c3a;
+  border-bottom-left-radius: 4px;
+}
+
+.msg.error {
+  align-self: flex-start;
+  background: #3a1a1a;
+  border: 1px solid #6b2e2e;
+  color: #ffb4b4;
+}
+
+.typing {
+  align-self: flex-start;
+  color: #8a93a6;
+  font-size: 13px;
+  padding: 4px 14px;
+}
+
+.composer {
+  display: flex;
+  gap: 8px;
+  padding-top: 12px;
+  border-top: 1px solid #1f2430;
+}
+
+.composer textarea {
+  flex: 1;
+  resize: none;
+  background: #12151d;
+  border: 1px solid #262c3a;
+  border-radius: 10px;
+  color: #e9edf3;
+  padding: 10px 12px;
+  font-size: 14.5px;
+  font-family: inherit;
+  min-height: 44px;
+  max-height: 160px;
+}
+
+.composer textarea:focus {
+  outline: none;
+  border-color: #2b5df2;
+}
+
+.composer button {
+  background: #2b5df2;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 0 18px;
+  font-size: 14.5px;
+  cursor: pointer;
+}
+
+.composer button:disabled {
+  background: #2b2f3a;
+  color: #6b7280;
+  cursor: not-allowed;
+}
